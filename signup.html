@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>
+        Sign Up
+    </title>
+    <style>
+        div.top{
+    text-align:center;
+    
+}
+div.mainbody{
+    text-align:center;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+div.footer{
+    text-align:center;
+}
+input.inside {
+font-family: "Roboto", sans-serif;
+outline: 0;
+background: #f2f2f2;
+width: 100%;
+border: 0;
+margin: 0 0 15px;
+padding: 15px;
+box-sizing: border-box;
+font-size: 14px;
+}
+input.submit {
+font-family: "Microsoft YaHei","Roboto", sans-serif;
+outline: 0;
+background: #4CAF50;
+width: 10%;
+border: 0;
+padding: 15px;
+color: #FFFFFF;
+font-size: 14px;
+}
+button{
+font-family: "Microsoft YaHei","Roboto", sans-serif;
+outline: 0;
+background: #4CAF50;
+width: 10%;
+border: 0;
+padding: 15px;
+color: #FFFFFF;
+font-size: 14px;
+}
+    </style>
+    </meta>
+    </meta>
+    </meta>
+</head>
+
+<body>
+    <div class="top">
+        <h2>
+            留言板注册
+        </h2>
+    </div>
+
+    <div class="mainbody">
+        <div class="status">
+            <h4>
+                注册
+            </h4>
+        </div>
+        <div class="zi">
+            <label>
+                用户名
+            </label>
+            <div class="box">
+                <input autocomplete="username" class="inside" id="username" name="username" placeholder="请输入用户名"
+                    required="required" type="text">
+                </input>
+            </div>
+        </div>
+        <div class="zi">
+            <label>
+                登录密码
+            </label>
+            <div class="box">
+                <input autocomplete="new-password" class="inside" id="password" name="password" placeholder="请输入密码"
+                    required="required" type="password">
+                </input>
+            </div>
+        </div>
+        <div class="zi">
+            <label>
+                确认登录密码
+            </label>
+            <div class="box">
+                <input autocomplete="new-password" class="inside" id="checkpwd" name="checkpwd" placeholder="请再次输入密码"
+                    required="required" type="password">
+                </input>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p id="msg"></p>
+        <input class="submit" id="confirm" onclick="test()" type="submit" value="确认注册"></input>
+        <a href="login.html">
+            <button name="login" type="button" value="登录">
+                前往登录
+            </button>
+        </a>
+
+    </div>
+
+
+        <p id="msg"></p>
+ 
+
+    <script src="signup.js">
+    </script>
+</body>
+
+</html>

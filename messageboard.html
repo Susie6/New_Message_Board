@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Message Board</title>
+    <style>
+h1{
+    text-align: center;
+    font-family: "Microsoft YaHei","Roboto", sans-serif;
+    color: forestgreen;
+    font-weight: bolder;
+    font-size: 70px;
+
+}
+body { 
+    font-size: 85%;
+    background-image: url(/mes.jpg);
+
+    }
+
+div.status{
+    background-color:#FFFFFF;
+    display : inline-block;
+    padding :20px;
+    margin-top:1em;
+    margin-bottom : 1em;
+    padding : 0.5em 1em;
+    font-weight: normal;
+    margin-left: 5%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+div.top{
+    text-align: center;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+div.former{
+    text-align: center;
+}
+div.tip{
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 20px;
+    color: darkslategray;
+    font-family: "Microsoft YaHei","Roboto", sans-serif;
+    border: #4CAF50 thick ;
+    width: 60%;
+}
+div.newmessage{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+div.former{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+div.page{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+textarea{
+    margin: 0px; 
+    width: 760px; 
+    height: 138px;
+
+}
+input.submit {
+	  font-family: "Microsoft YaHei","Roboto", sans-serif;
+	  outline: 0;
+	  background: #4CAF50;
+	  width: 10%;
+	  
+	  padding: 15px;
+	  color: #FFFFFF;
+	  font-size: 14px;
+    }
+button{
+      font-family: "Microsoft YaHei","Roboto", sans-serif;
+	  outline: 0;
+	  background: #4CAF50;
+	  width: 10%;
+	  border: 0;
+	  padding: 15px;
+	  color: #FFFFFF;
+	  font-size: 14px;
+    }
+p{
+    font-weight: bold;
+    font-size: 20px;
+    color: darkslategray;
+    font-family: "Microsoft YaHei","Roboto", sans-serif;
+}
+    </style>
+</head>
+
+<body>
+    <h1>留言板</h1>
+    <div class="status">
+    <div>
+        <a href="login.html">Log in</a>
+    </div>
+    <div>
+        <a href="signup.html">Sign up</a>
+    </div>
+    <div>
+        <a href="logout.html">Log out</a>
+    </div>
+    <div id="pic">
+        <form method="POST" action="edit_pic.php" enctype="multipart/form-data" id="edit_pic">
+            <p>更改头像</p>
+            <input type="file" name="file" id="file"></input>
+            <input type="submit" name="submit" value="确认"></input>
+        </form>
+    </div>
+    </div>
+    <div id="try"></div>
+    <div class="top" id="top">
+        <textarea type="text" id="message" name="message" placeholder="请输入留言内容" required="required"></textarea>
+        <input type="submit" id="sbumit" class="submit" value="留言" onclick="sendmessage()"></input>
+        <div id="tip" class="tip"></div>
+        <div id="newmessage" class="newmessage"></div>
+        <div id="former" class="former"></div>
+    </div>
+    <div class="page" id="page">
+    </div>
+    <!-- <div class="turntopage" id="turntopage">
+        <p>第</p><input type="text" id="turntopage" class="turntopage" placeholder="页码"></input><p>页</p>
+        <input type="button" class="confirm" id="confirm" value="跳转" onclick="change_page()"></input>
+    </div> -->
+</body>
+<script src="messageboard.js"></script>
+
+</html>
